@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SMART IOT</title>
+
+<!-- CHART.JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<div id="sidebar">
+    <h2>Smart IOT</h2>
+    <a class="nav-link active" onclick="showPage('dashboard', this)">Dashboard</a>
+    <a class="nav-link" onclick="showPage('control', this)">Control</a>
+    <a class="nav-link" onclick="showPage('about', this)">About</a>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div id="main-content">
+
+    <!-- HEADER -->
+    <div id="header">
+        <div class="left-box">
+            <img src="./img/logodai.png" class="logo">
+        </div>
+        <div class="right-box">
+            <h1 class="title">SMART IOT</h1>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div id="content-area">
+        <h2>Dashboard</h2>
+        <p>Welcome to Smart Farm Dashboard.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        Thành viên : Vũ Quốc Bảo - Lê Nhật Nam - Nguyễn Duy Vương
+    </div>
+
+</div>
+<!-- FIREBASE SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script>
+const firebaseConfig = {
+    apiKey: "AIzaSyDGifMrowpyQntNCVKV7ytDOT12RTU3Omg",
+    authDomain: "ttiot-e3a07.firebaseapp.com",
+    databaseURL: "https://ttiot-e3a07-default-rtdb.firebaseio.com",
+    projectId: "ttiot-e3a07",
+    storageBucket: "ttiot-e3a07.firebasestorage.app",
+    messagingSenderId: "954274339314",
+    appId: "1:954274339314:web:acb05b6afa08e13db9336b",
+    measurementId: "G-CEGCCRPG8N"
+  };
+
+  // INIT
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+</script>
+
+<!-- JS -->
+<script src="main.js"></script>
+</body>
+</html>

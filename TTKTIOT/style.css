@@ -1,0 +1,399 @@
+ html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #E0E0E0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ===== SIDEBAR ===== */
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background: #1E1E1E;
+        padding-top: 20px;
+        color: white;
+    }
+
+    #sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .nav-link {
+        padding: 12px 20px;
+        display: block;
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        border-bottom: 1px solid #333;
+        transition: 0.3s;
+    }
+
+    .nav-link:hover {
+        background: #333;
+        cursor: pointer;
+    }
+
+    .active {
+        background: #4CAF50 !important; 
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    #main-content {
+        margin-left: 200px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* ===== HEADER ===== */
+    #header {
+        display: flex;
+        width: 100%;
+        background: white;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .left-box, .right-box {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .title {
+        font-size: 32px;
+        font-weight: bold;
+        color: blue;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* ===== MAIN PANEL ===== */
+    #content-area {
+        padding: 20px;
+        font-size: 18px;
+        color: black;
+        flex: 1;
+    }
+
+    /* ===== FOOTER ===== */
+    #footer {
+        padding: 15px;
+        text-align: left;
+        color: red;
+        font-size: 14px;
+        border-top: 2px solid #ccc;
+        background: white;
+    }
+
+    /* ==== DASHBOARD CARD STYLE ==== */
+    .main-title {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        color: #4A007F;
+    }
+
+    .main-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        font-size: 22px;
+        transition: 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    /* ==== CHART STYLE ==== */
+    .charts {
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .charts-card {
+        background: white;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .chart-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #7A006E;
+        text-align: center;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: 260px !important;
+    }
+
+    /* ===========================
+       NEW: Flexbox cho tiêu đề-nút-thời gian
+    ============================ */
+    .top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    .top-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #4A007F;
+    }
+
+    .top-btn {
+        padding: 10px 20px;
+        background: #6DD6E6;
+        border: 2px solid black;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .top-time {
+        font-size: 24px;
+        font-style: italic;
+    }
+    /* ========== CONTROL PAGE LAYOUT FIX ========== */
+
+.image-but {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* left section */
+.room1 {
+    width: 65%;
+    background: transparent; 
+    padding: 20px;
+    border-radius: 15px;
+}
+/* Features buttons ngang hàng */
+.room1 button#def_but,
+.room1 button#all_on,
+.room1 button#all_off {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#titlex {
+    margin-top: 20px;
+}
+
+/* Bọc các nút Features và canh giữa */
+.features-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.room1 .image {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.name_device pre {
+    font-size: 16px;
+    text-align: center;
+}
+
+.button_all {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button_all input[type="range"] {
+    width: 120px;
+}
+
+/* Feature buttons */
+.room1 button {
+    margin-top: 10px;
+    display: block;
+    width: 130px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #355C7D;
+    color: white;
+    border: 2px solid black;
+}
+
+#title, #titlex, .controlx {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ========== RIGHT PANEL ========== */
+
+.room2 {
+    width: 30%;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.title_room2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3d0149;
+    margin-bottom: 8px; 
+}
+
+.room2 > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.6);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.room2 input[type="range"] {
+    flex: 1;
+}
+
+.status {
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    background: #c0eba6 !important;
+}
+
+/* TIMER MODAL FIXED */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: #E8FFE2;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.frames-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.frame {
+    width: 22%;
+    background: #c8edbf;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.option {
+    margin-top: 10px;
+}
+
+#confirmTimer {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    background: #2b8a3e;
+    color: white;
+    border: 2px solid black;
+}
+/* ===== FAN ROTATION SPEEDS ===== */
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 0: đứng yên */
+.spinStop {
+    animation: none;
+}
+
+/* 1: quay chậm */
+.spin1 {
+    animation: spin 2s linear infinite;
+}
+
+/* 2: quay trung bình */
+.spin2 {
+    animation: spin 1.5s linear infinite;
+}
+
+/* 3: quay nhanh */
+.spin3 {
+    animation: spin 1s linear infinite;
+}
+
+/* 4: quay rất nhanh */
+.spin4 {
+    animation: spin 0.5s linear infinite;
+}
+/* Xóa bo góc */
+.box-section {
+    background: white;
+    border: 1px solid #444;
+    border-radius: 0;      
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+/* Căn tiêu đề sang phải */
+.box-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;      /* Căn phải */
+    margin-bottom: 5px;
+    color: #02060a;
+}
